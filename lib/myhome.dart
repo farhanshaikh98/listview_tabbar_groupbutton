@@ -24,120 +24,55 @@ class _MyHomeState extends State<MyHome> {
           ),
         ],
       ),
-      body: ListView(
-        children: [
-          Card(
-            child: Container(
+      body: ListView.builder(
+          itemCount: 40,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
               child: Column(
                 children: [
+                  ListTile(
+                    leading: Image.network(
+                        'https://cdn.pixabay.com/photo/2016/02/19/11/46/man-1209947_960_720.jpg'),
+                    title: Text("William"),
+                    subtitle: Text("Active"),
+                    trailing: Icon(Icons.escalator_warning),
+                  ),
                   Image.network(
-                    'https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg',
+                    'https://cdn.pixabay.com/photo/2016/07/13/16/00/box-1514845_960_720.jpg',
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
-                            children: [
-                              Icon(Icons.thumb_up),
-                              Text("Like"),
-                            ],
+                            children: [Icon(Icons.thumb_up), Text("Like")],
                           ),
                         ),
                         Row(
-                          children: [
-                            Icon(Icons.comment),
-                            Text("comment"),
-                          ],
+                          children: [Icon(Icons.comment), Text("Comment")],
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
-                            children: [
-                              Icon(Icons.share),
-                              Text("share"),
-                            ],
+                            children: [Icon(Icons.share), Text("share")],
                           ),
                         ),
                       ],
                     ),
-                  ),
-                  Image.network(
-                    "https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg",
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Row(
-                            children: [
-                              Icon(Icons.thumb_up),
-                              Text("Like"),
-                            ],
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Icon(Icons.comment),
-                            Text("comment"),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Row(
-                            children: [
-                              Icon(Icons.share),
-                              Text("share"),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.network(
-                    "https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg",
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(
-                          children: [
-                            Icon(Icons.thumb_up),
-                            Text("Like"),
-                          ],
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.comment),
-                          Text("comment"),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(
-                          children: [
-                            Icon(Icons.share),
-                            Text("share"),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                  )
                 ],
               ),
-            ),
-          ),
-        ],
-      ),
+            );
+            // ListTile(
+            //   leading: Icon(Icons.person),
+            //   title: Text("call1"),
+            //   subtitle: Text("recivecall ${index + 1}"),
+            //   trailing: Icon(Icons.call),
+            // );
+          }),
     );
   }
 }

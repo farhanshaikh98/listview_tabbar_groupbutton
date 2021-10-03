@@ -1,3 +1,4 @@
+import 'package:assignment11/myhome.dart';
 import 'package:flutter/material.dart';
 // import 'myhome.dart';
 import 'tabbar.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "post ",
       theme: ThemeData(primarySwatch: Colors.blueGrey),
-      home: MyTabbar(),
+      home: MyHome(),
     );
   }
 }
