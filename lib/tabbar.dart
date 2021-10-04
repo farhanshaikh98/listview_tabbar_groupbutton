@@ -19,6 +19,8 @@ class _MyTabbarState extends State<MyTabbar> {
           backgroundColor: Colors.white,
           elevation: 0.0,
           bottom: TabBar(
+            indicatorColor: Colors.white,
+            labelColor: Colors.red,
             tabs: [
               Container(
                 width: 80,
