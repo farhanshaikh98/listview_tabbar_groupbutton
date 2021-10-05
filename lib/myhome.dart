@@ -54,11 +54,7 @@ class _MyHomeState extends State<MyHome> {
                             child: InkWell(
                                 onTap: () {
                                   setState(() {
-                                    if (boolvalue) {
-                                      boolvalue = false;
-                                    } else {
-                                      boolvalue = true;
-                                    }
+                                    boolvalue = !boolvalue;
                                   });
                                 },
                                 child: Column(
@@ -112,7 +108,7 @@ class _MyHomeState extends State<MyHome> {
                   top: 220,
                   left: 50,
                   child: Container(
-                    width: 200,
+                    width: 240,
                     height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -123,105 +119,99 @@ class _MyHomeState extends State<MyHome> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
 
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/slightly-smiling-face_1f642.png';
                               title = "Smiling ";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/slightly-smiling-face_1f642.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/slightly-smiling-face_1f642.png',
+                                width: 30),
+                          ),
                         ),
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/smiling-face-with-heart-eyes_1f60d.png';
                               title = "Heart ";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/smiling-face-with-heart-eyes_1f60d.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/smiling-face-with-heart-eyes_1f60d.png',
+                                width: 30),
+                          ),
                         ),
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/pouting-face_1f621.png';
                               title = " Angry";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/pouting-face_1f621.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/pouting-face_1f621.png',
+                                width: 30),
+                          ),
                         ),
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/hugging-face_1f917.png';
                               title = "Hugging";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/hugging-face_1f917.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/hugging-face_1f917.png',
+                                width: 30),
+                          ),
                         ),
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/face-with-tears-of-joy_1f602.png';
                               title = "Haha";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/face-with-tears-of-joy_1f602.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/face-with-tears-of-joy_1f602.png',
+                                width: 30),
+                          ),
                         ),
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (boolvalue) {
-                                boolvalue = false;
-                              } else {
-                                boolvalue = true;
-                              }
+                              boolvalue = !boolvalue;
                               showemoji =
                                   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/smiling-face-with-hearts_1f970.png';
                               title = "In love";
                             });
                           },
-                          child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/smiling-face-with-hearts_1f970.png',
-                              width: 30),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.network(
+                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/smiling-face-with-hearts_1f970.png',
+                                width: 30),
+                          ),
                         ),
                       ],
                     ),
