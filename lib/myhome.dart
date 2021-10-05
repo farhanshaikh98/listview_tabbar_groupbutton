@@ -9,7 +9,8 @@ class MyHome extends StatefulWidget {
 
 class _MyHomeState extends State<MyHome> {
   bool boolvalue = false;
-  List img = [];
+  String? showemoji;
+  String? title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,13 +63,32 @@ class _MyHomeState extends State<MyHome> {
                                 },
                                 child: Column(
                                   children: [
-                                    img[0] ??
-                                    Row(
-                                      children: [
-                                        Icon(Icons.thumb_up),
-                                        Text("Like"),
-                                      ],
-                                    ),
+                                    (showemoji != null)
+                                        ? Row(
+                                            children: [
+                                              Image.network(
+                                                showemoji!,
+                                                width: 30,
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 1),
+                                                child: Text(
+                                                  "$title",
+                                                  style: TextStyle(
+                                                      fontSize: 15,
+                                                      color: Colors.red),
+                                                ),
+                                              ),
+                                            ],
+                                          )
+                                        : Row(
+                                            children: [
+                                              Icon(Icons.thumb_up),
+                                              Text("Like"),
+                                            ],
+                                          ),
                                   ],
                                 )),
                           ),
@@ -109,10 +129,9 @@ class _MyHomeState extends State<MyHome> {
                                 boolvalue = true;
                               }
 
-                              img.add(Image.network(
-                                'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/slightly-smiling-face_1f642.png',
-                                width: 30,
-                              ));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/slightly-smiling-face_1f642.png';
+                              title = "Smiling ";
                             });
                           },
                           child: Image.network(
@@ -127,9 +146,9 @@ class _MyHomeState extends State<MyHome> {
                               } else {
                                 boolvalue = true;
                               }
-                              img.add(Image.network(
-                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/smiling-face-with-heart-eyes_1f60d.png',
-                                  width: 30));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/facebook/304/smiling-face-with-heart-eyes_1f60d.png';
+                              title = "Heart ";
                             });
                           },
                           child: Image.network(
@@ -144,9 +163,9 @@ class _MyHomeState extends State<MyHome> {
                               } else {
                                 boolvalue = true;
                               }
-                              img.add(Image.network(
-                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/pouting-face_1f621.png',
-                                  width: 30));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/pouting-face_1f621.png';
+                              title = " Angry";
                             });
                           },
                           child: Image.network(
@@ -161,9 +180,9 @@ class _MyHomeState extends State<MyHome> {
                               } else {
                                 boolvalue = true;
                               }
-                              img.add(Image.network(
-                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/hugging-face_1f917.png',
-                                  width: 30));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/hugging-face_1f917.png';
+                              title = "Hugging";
                             });
                           },
                           child: Image.network(
@@ -178,13 +197,13 @@ class _MyHomeState extends State<MyHome> {
                               } else {
                                 boolvalue = true;
                               }
-                              img.add(Image.network(
-                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/face-with-steam-from-nose_1f624.png',
-                                  width: 30));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/face-with-tears-of-joy_1f602.png';
+                              title = "Haha";
                             });
                           },
                           child: Image.network(
-                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/face-with-steam-from-nose_1f624.png',
+                              'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/face-with-tears-of-joy_1f602.png',
                               width: 30),
                         ),
                         InkWell(
@@ -195,9 +214,9 @@ class _MyHomeState extends State<MyHome> {
                               } else {
                                 boolvalue = true;
                               }
-                              img.add(Image.network(
-                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/smiling-face-with-hearts_1f970.png',
-                                  width: 30));
+                              showemoji =
+                                  'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/google/298/smiling-face-with-hearts_1f970.png';
+                              title = "In love";
                             });
                           },
                           child: Image.network(
